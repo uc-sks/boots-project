@@ -205,7 +205,7 @@
                         <td class="user-avatar cell-detail user-info">
                           <img
                             src="https://www.ucertify.com/layout/themes/bootstrap4/images/default_user.jpg"
-                            class="rounded-circle span0 mr"
+                            class="rounded-circle mr" width="34" height="34"
                             alt="...."
                           />
                           <span>Abhishek Ku..</span>
@@ -262,14 +262,10 @@
                             </div>
                         </td>
                         <td class="d-flex align-items-center flex-wrap">
-                          <div
-                            class="profile bg-success rounded-circle font-weight-bold d-flex align-items-center justify-content-center height34 width34"
-
-                          >
-                            <span class="font14 font-weight-bold"> AP </span>
-                          </div>
-                          <span class="ml-2">Abhishek Pan..</span>
-                        </td>
+                          <div class="profile bg-success rounded-circle font-weight-bold d-flex align-items-center justify-content-center height34 width34"></div>
+                          <span class="ml-1 text-truncate width100"><span
+                                  class="firstname">Shivam</span><span class="lastname ml-1">Singh</span></span>
+                      </td>
                         <td class="align-middle">
                             <p class="m-0">APP-Training</p>
                             <small class="text-muted">app-training</small>
@@ -320,5 +316,11 @@
         </div>
     </div>
 </body>
+<script>
+  let firstname = document.querySelector('.firstname').textContent;
+  let lastname = document.querySelector('.lastname').textContent;
+  let profile = document.querySelector('.profile');
+  profile.textContent = firstname[0] + lastname[0];
+</script>
 
 </html>
